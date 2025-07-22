@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1e1b38, #0d0c1b);
+  color: #e0e0f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+header {
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+  color: #b48de5;
+}
+header h2 {
+  font-size: 1.5rem;
+  color: #70d6ff;
+}
+header p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+.icons a {
+  margin: 0 10px;
+  color: #b48de5;
+  text-decoration: none;
+}
+.cv-button {
+  padding: 0.3rem 0.8rem;
+  background-color: #70d6ff;
+  color: #000;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.skills h3,
+.projects h3 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: #b48de5;
+}
+.project {
+  margin: 1rem 0;
+}
+.project h4 a {
+  color: #70d6ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.project p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
