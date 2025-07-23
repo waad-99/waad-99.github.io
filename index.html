@@ -1,46 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Waad Almaimoni – Unity & VR Developer</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      background-color: #1f1f1f;
-      padding: 20px;
-      border-radius: 12px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 48px;
-      margin-bottom: 10px;
-    }
-    .card h2 {
-      margin: 10px 0 5px;
-    }
-    .card a {
-      text-decoration: none;
-      color: #00e1ff;
-    }
-    .card p {
-      color: #ccc;
-      font-size: 0.95em;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -57,69 +20,73 @@
     </header>
 
     <section class="skills">
-  <h3>Skills</h3>
-  <ul class="skills-list">
-    <li><strong>🛠️ Game Development:</strong> Unity, C#, VR/AR, Meta SDK, XR Interaction Toolkit</li>
-    <li><strong>🎨 Design & Art:</strong> Shader Graph, Maya, Blender, Photoshop, Illustrator, After Effects</li>
-    <li><strong>🧠 Soft Skills:</strong> Problem-solving, Creativity, Critical Thinking, Teamwork</li>
-  </ul>
-</section>
-
+      <h3>Skills</h3>
+      <ul class="skills-list">
+        <li>Unity</li>
+        <li>C#</li>
+        <li>VR/AR</li>
+        <li>Meta SDK</li>
+        <li>Shader Graph</li>
+        <li>Maya</li>
+        <li>Blender</li>
+        <li>Photoshop</li>
+        <li>After Effects</li>
+        <li>Illustrator</li>
+      </ul>
+    </section>
 
     <section class="projects">
-      <h3>My Games</h3>
-      <div class="card-container">
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="legacy-of-the-sands/index.html">Legacy of the Sands</a></h2>
-          <p>VR experience exploring historical events and immersive storytelling.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="captain-bonzo/index.html">Captain Bonzo</a></h2>
-          <p>Mixed reality adventure with hand-tracking in a 3D environment.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="mad-show/index.html">Madshow</a></h2>
-          <p>Psychological VR horror puzzle game using voice and hand interaction.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="one-room-one-lie/index.html">One Room One Lie</a></h2>
-          <p>Mystery game based on dialogue analysis and logic.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="knight-cat/index.html">Knight Cat</a></h2>
-          <p>2D action game with lightning strikes and super jumps.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="coinfall-quest/index.html">Coinfall Quest</a></h2>
-          <p>Arcade game collecting coins while dodging skulls.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="fall-and-jump/index.html">Fall & Jump</a></h2>
-          <p>Platformer where you ascend through falling challenges.</p>
-        </div>
-
-        <div class="card">
-          <img src="assets/Pixel.png" alt="Icon">
-          <h2><a href="the-secret-of-the-village/index.html">The Secret of the Village</a></h2>
-          <p>A hidden narrative-based puzzle experience in a mysterious village.</p>
-        </div>
-
+      <h3>Featured Projects</h3>
+      <div class="card" onclick="openModal('legacy')">
+        <img src="assets/legacy.png" alt="Legacy Icon">
+        <h2>Legacy of the Sands</h2>
+        <p>VR historical journey through the founding of the First Saudi State.</p>
+      </div>
+      <div class="card" onclick="openModal('captain')">
+        <img src="assets/captain-bonzo.png" alt="Captain Bonzo Icon">
+        <h2>Captain Bonzo</h2>
+        <p>Mixed reality adventure with hand-tracking in a 3D environment.</p>
       </div>
     </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-text"></div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function openModal(project) {
+      const descriptions = {
+        'legacy': \`
+          <h2>Legacy of the Sands</h2>
+          <p>This VR experience narrates the story of the founding of the First Saudi State in an immersive environment.</p>
+          <p><strong>Technologies:</strong> Unity, C#, VR, Oculus SDK</p>
+          <p><strong>My Role:</strong> Story design, VR implementation, 3D modeling</p>
+        \`,
+        'captain': \`
+          <h2>Captain Bonzo</h2>
+          <p>Explore your own home as Captain Bonzo! This mixed reality game uses real room tracking and object snapping for a whimsical quest.</p>
+          <p><strong>Technologies:</strong> Unity, Meta Quest, MR Toolkit</p>
+          <p><strong>My Role:</strong> Gameplay programming, interaction design</p>
+        \`
+      };
+      document.getElementById('modal-text').innerHTML = descriptions[project];
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    };
+  </script>
 </body>
 </html>
