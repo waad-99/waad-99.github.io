@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fafafa;
+  background-color: #ffffff; /* تعديل لون الخلفية للون أبيض نقي */
   color: #333;
   line-height: 1.6;
 }
@@ -113,7 +113,7 @@ header p {
 
 .project-card img {
   width: 100%;
-  max-height: 180px;
+  max-height: 140px; /* تصغير حجم صور الألعاب */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -140,7 +140,7 @@ header p {
 
 .project-page img {
   width: 100%;
-  max-height: 320px;
+  max-height: 280px; /* تصغير صور صفحة المشروع */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 25px;
