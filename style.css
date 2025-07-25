@@ -1,3 +1,4 @@
+/* style.css */
 body {
   margin: 0;
   padding: 0;
@@ -17,8 +18,14 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: #b48de5;
+}
+
+header h2, .skills h2, .projects h2 {
+  font-size: 1.5rem;
   color: #70d6ff;
+  margin-top: 2.5rem;
 }
 
 header p {
@@ -31,7 +38,6 @@ header p {
   margin: 0 10px;
   color: #b48de5;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .cv-button {
@@ -40,54 +46,89 @@ header p {
   color: #000;
   border-radius: 5px;
   margin-left: 10px;
-}
-
-.skills h2,
-.projects h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  color: #d09aff;
+  font-weight: bold;
 }
 
 .skill-tags {
-  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
 }
 
 .skill-tags span {
-  display: inline-block;
-  background-color: #2b2555;
-  color: #c0c0ff;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-  border-radius: 10px;
+  background-color: #2b2a4c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   font-size: 0.9rem;
+  color: #fff;
+}
+
+.projects {
+  margin-top: 2rem;
 }
 
 .project-card {
-  background-color: #1a172f;
+  background-color: #2a2540;
+  border-radius: 10px;
   padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .project-card img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.5rem;
+  max-width: 100px;
+  border-radius: 8px;
 }
 
 .project-card h3 {
-  margin: 0.3rem 0;
-  color: #fff;
+  color: #70d6ff;
+  margin: 0.5rem 0;
 }
 
 .project-card p {
   color: #ccc;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.project-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #e0e0f8;
+}
+
+.project-page img {
+  max-width: 200px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 12px;
+}
+
+.project-page section {
+  margin-top: 2rem;
+}
+
+.project-page h2 {
+  color: #70d6ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-page ul {
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.project-page a {
+  color: #70d6ff;
+  text-decoration: underline;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #b48de5;
+  font-weight: bold;
+  text-decoration: none;
 }
