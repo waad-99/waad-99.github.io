@@ -2,91 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Waad Almaimoni – Unity & VR Developer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waad Almaimoni | Game Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Waad Almaimoni</h1>
-      <h2>Unity & VR Developer</h2>
+      <h1>Unity & VR Developer</h1>
       <p>I’m a game developer specializing in Unity and creating immersive VR experiences. I’m passionate about designing and programming interactive gameplay and virtual worlds.</p>
       <div class="icons">
         <a href="https://github.com/waad-99" target="_blank">GitHub</a>
         <a href="https://waad-99.itch.io/" target="_blank">itch.io</a>
-        <a href="https://www.linkedin.com/in/waad-almaimoni-648b5423b/" target="_blank">LinkedIn</a>
-        <a href="https://drive.google.com/file/d/1GDc6H_rH8mwscJFXyHq3Gf_JEZmgHJZl/view?usp=sharing" target="_blank" class="cv-button">Download CV</a>
+        <a href="#">LinkedIn</a>
+        <a class="cv-button" href="Waad Almaimoni_ CV,Portfolio.pdf" target="_blank">Download CV</a>
       </div>
     </header>
 
     <section class="skills">
-      <h3>Skills</h3>
-      <ul class="skills-list">
-        <li>Unity</li>
-        <li>C#</li>
-        <li>VR/AR</li>
-        <li>Meta SDK</li>
-        <li>Shader Graph</li>
-        <li>Maya</li>
-        <li>Blender</li>
-        <li>Photoshop</li>
-        <li>After Effects</li>
-        <li>Illustrator</li>
-      </ul>
+      <h2>Skills</h2>
+      <div class="skill-tags">
+        <span>Unity</span>
+        <span>C#</span>
+        <span>VR/AR</span>
+        <span>Meta SDK</span>
+        <span>Shader Graph</span>
+        <span>Maya</span>
+        <span>Blender</span>
+        <span>Photoshop</span>
+        <span>After Effects</span>
+        <span>Illustrator</span>
+      </div>
     </section>
 
     <section class="projects">
-      <h3>Featured Projects</h3>
-      <div class="card" onclick="openModal('legacy')">
-        <img src="assets/legacy.png" alt="Legacy Icon">
-        <h2>Legacy of the Sands</h2>
+      <h2>Featured Projects</h2>
+
+      <!-- Project Cards -->
+      <div class="project-card">
+        <img src="assets/legacy.png" alt="Legacy Icon" />
+        <h3>Legacy of the Sands</h3>
         <p>VR historical journey through the founding of the First Saudi State.</p>
       </div>
-      <div class="card" onclick="openModal('captain')">
-        <img src="assets/captain-bonzo.png" alt="Captain Bonzo Icon">
-        <h2>Captain Bonzo</h2>
+
+      <div class="project-card">
+        <img src="assets/captain-bonzo.png" alt="Captain Bonzo Icon" />
+        <h3>Captain Bonzo</h3>
         <p>Mixed reality adventure with hand-tracking in a 3D environment.</p>
       </div>
-    </section>
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modal-text"></div>
+      <div class="project-card">
+        <img src="assets/madshow.png" alt="Madshow Icon" />
+        <h3>Madshow</h3>
+        <p>Psychological horror VR experience inside an eerie mental hospital.</p>
       </div>
-    </div>
+
+      <div class="project-card">
+        <img src="assets/one-room.png" alt="One Room Icon" />
+        <h3>One Room One Lie</h3>
+        <p>Escape room experience where each character hides a secret.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/knight-cat.png" alt="Knight Cat Icon" />
+        <h3>Knight Cat</h3>
+        <p>A brave feline knight embarks on a pixel-art quest to reclaim the kingdom.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/coinfall.png" alt="Coinfall Quest Icon" />
+        <h3>Coinfall Quest</h3>
+        <p>Collect coins and dodge traps in this fast-paced arcade platformer.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/falljump.png" alt="Fall & Jump Icon" />
+        <h3>Fall & Jump</h3>
+        <p>Colorful mobile jumping game with endless platform fun.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/village.png" alt="Village Icon" />
+        <h3>The Secret of the Village</h3>
+        <p>An interactive story-driven mystery set in an old Arabian village.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/morgue.png" alt="Morgue Icon" />
+        <h3>المشرحة</h3>
+        <p>تجربة رعب نفسية داخل مشرحة غامضة في بيئة تفاعلية ثلاثية الأبعاد.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/symbol-story.png" alt="Show Me the Symbol Icon" />
+        <h3>Show Me the Symbol… Hear the Story</h3>
+        <p>لعبة تعليمية تربط بين الرموز البصرية والحكايات بطريقة تفاعلية للأطفال.</p>
+      </div>
+    </section>
   </div>
-
-  <script>
-    function openModal(project) {
-      const descriptions = {
-        'legacy': \`
-          <h2>Legacy of the Sands</h2>
-          <p>This VR experience narrates the story of the founding of the First Saudi State in an immersive environment.</p>
-          <p><strong>Technologies:</strong> Unity, C#, VR, Oculus SDK</p>
-          <p><strong>My Role:</strong> Story design, VR implementation, 3D modeling</p>
-        \`,
-        'captain': \`
-          <h2>Captain Bonzo</h2>
-          <p>Explore your own home as Captain Bonzo! This mixed reality game uses real room tracking and object snapping for a whimsical quest.</p>
-          <p><strong>Technologies:</strong> Unity, Meta Quest, MR Toolkit</p>
-          <p><strong>My Role:</strong> Gameplay programming, interaction design</p>
-        \`
-      };
-      document.getElementById('modal-text').innerHTML = descriptions[project];
-      document.getElementById('modal').style.display = 'block';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('modal');
-      if (event.target == modal) {
-        closeModal();
-      }
-    };
-  </script>
 </body>
 </html>
