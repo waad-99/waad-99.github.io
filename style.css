@@ -1,10 +1,10 @@
-/* Updated style.css for modern, clean design */
+/* Updated style.css for dark modern portfolio theme */
 
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* تعديل لون الخلفية للون أبيض نقي */
-  color: #333;
+  background-color: #0d0b28;
+  color: #e0dff6;
   line-height: 1.6;
 }
 
@@ -23,12 +23,12 @@ header {
 header h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #222;
+  color: #c792ea;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #666;
+  color: #a09dbc;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -39,18 +39,18 @@ header p {
 
 .icons a {
   margin: 0 10px;
-  color: #007acc;
+  color: #7fdbff;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .icons a:hover {
-  color: #004b73;
+  color: #00bfff;
 }
 
 .cv-button {
-  background-color: #007acc;
+  background-color: #00bfff;
   color: white;
   padding: 10px 16px;
   border-radius: 6px;
@@ -60,7 +60,7 @@ header p {
 }
 
 .cv-button:hover {
-  background-color: #005d99;
+  background-color: #0099cc;
 }
 
 .skills {
@@ -70,6 +70,7 @@ header p {
 
 .skills h2 {
   font-size: 1.8rem;
+  color: #7fdbff;
   margin-bottom: 15px;
 }
 
@@ -81,7 +82,8 @@ header p {
 }
 
 .skill-tags span {
-  background-color: #e0e0e0;
+  background-color: #29274d;
+  color: #d1ceec;
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 0.95rem;
@@ -92,14 +94,17 @@ header p {
   font-size: 2rem;
   margin-bottom: 30px;
   text-align: center;
+  color: #29b6f6;
 }
 
 .project-card {
-  display: block;
-  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #29274d;
   border-radius: 10px;
   padding: 15px;
-  background-color: white;
+  background-color: #1a1833;
   margin-bottom: 25px;
   text-decoration: none;
   color: inherit;
@@ -108,39 +113,44 @@ header p {
 
 .project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
-  width: 100%;
-  max-height: 140px; /* تصغير حجم صور الألعاب */
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
 }
 
+.project-card-content {
+  flex: 1;
+}
+
 .project-card h3 {
-  margin-top: 12px;
-  font-size: 1.4rem;
-  color: #111;
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #7fdbff;
 }
 
 .project-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #b3b0d8;
+  margin: 0;
 }
 
 .project-page {
   max-width: 850px;
   margin: 0 auto;
   padding: 30px 20px;
-  background-color: #fff;
+  background-color: #1a1833;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-page img {
   width: 100%;
-  max-height: 280px; /* تصغير صور صفحة المشروع */
+  max-height: 280px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -149,23 +159,24 @@ header p {
 .project-page h2 {
   margin-top: 35px;
   font-size: 1.6rem;
-  color: #222;
+  color: #c792ea;
 }
 
 .project-page ul {
   padding-left: 25px;
   line-height: 1.7;
+  color: #ccc;
 }
 
 .project-page a.back-btn {
   display: inline-block;
   margin-top: 45px;
   text-decoration: none;
-  color: #007acc;
+  color: #7fdbff;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .project-page a.back-btn:hover {
-  color: #004b73;
+  color: #00bfff;
 }
