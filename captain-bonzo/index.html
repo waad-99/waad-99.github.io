@@ -24,6 +24,33 @@
       transform: scale(1.05);
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
+
+    /* Lightbox styles */
+    #lightbox {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+    #lightbox .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -56,7 +83,7 @@
       <p>[Describe any challenges you faced during development of Captain Bonzo]</p>
     </section>
 
-    <!-- قسم لقطات اللعبة -->
+    <!-- قسم لقطات اللعبة مع خاصية التكبير -->
     <section>
       <h2><img src="../assets/Pixel.png" alt="Icon" style="width: 32px; vertical-align: middle;"> Game Screenshots</h2>
       <div class="screenshots">
@@ -71,5 +98,44 @@
       <p><a href="../index.html">← Back to Portfolio</a></p>
     </footer>
   </main>
+
+  <!-- نافذة التكبير (Lightbox) -->
+  <div id="lightbox">
+    <span class="close-btn">&times;</span>
+    <img src="" alt="Expanded Screenshot" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.close-btn');
+    const thumbnails = document.querySelectorAll('.screenshots img');
+
+    thumbnails.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    // اغلاق النافذة لما تضغط على الخلفية (غير الصورة)
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // اغلاق النافذة بزر Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === "Escape") {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
