@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Captain Bonzo | Waad Almaimoni</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .screenshots {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .screenshots img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .screenshots img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -34,6 +54,17 @@
     <section>
       <h2><img src="../assets/Pixel.png" alt="Icon" style="width: 32px; vertical-align: middle;"> Challenges</h2>
       <p>[Describe any challenges you faced during development of Captain Bonzo]</p>
+    </section>
+
+    <!-- قسم لقطات اللعبة -->
+    <section>
+      <h2><img src="../assets/Pixel.png" alt="Icon" style="width: 32px; vertical-align: middle;"> Game Screenshots</h2>
+      <div class="screenshots">
+        <img src="../assets/screenshots/shot1.png" alt="Screenshot 1" />
+        <img src="../assets/screenshots/shot2.png" alt="Screenshot 2" />
+        <img src="../assets/screenshots/shot3.png" alt="Screenshot 3" />
+        <img src="../assets/screenshots/shot4.png" alt="Screenshot 4" />
+      </div>
     </section>
 
     <footer>
